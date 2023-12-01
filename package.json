@@ -1,0 +1,23 @@
+{
+  "name": "aoc23",
+  "version": "1.0.0",
+  "description": "solutions to aoc 2023",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GergelyEory/aoc23.git"
+  },
+  "author": "GergelyEory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GergelyEory/aoc23/issues"
+  },
+  "homepage": "https://github.com/GergelyEory/aoc23#readme",
+  "dependencies": {
+    "prettier": "^3.1.0"
+  }
+}
