@@ -1,16 +1,14 @@
-import { readData } from '../../shared.ts';
+import { numRegex, readData } from '../../shared.ts';
 import chalk from 'chalk';
 
 export async function day4a(dataPath?: string) {
   const data = (await readData(dataPath)).filter((d) => d.trim().length);
 
-  const regex = /\d+/g;
-
   const nums = data.map((line) =>
     line
       .split(':')[1]
       .split('|')
-      .map((part) => part.trim().match(regex).map(Number)),
+      .map((part) => part.trim().match(numRegex).map(Number)),
   );
 
   const values = nums.map((line) => {

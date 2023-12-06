@@ -5,3 +5,5 @@ export async function readData(path?: string) {
   const data = (await readFile(fileName)).toString().split('\n');
   return data;
 }
+
+export const numRegex = /\d+/g;

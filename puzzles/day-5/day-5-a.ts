@@ -1,7 +1,5 @@
-import { readData } from '../../shared.ts';
+import { numRegex, readData } from '../../shared.ts';
 import chalk from 'chalk';
-
-const regex = /\d+/g;
 
 export async function day5a(dataPath?: string) {
   const data = await readData(dataPath);
@@ -20,7 +18,7 @@ export async function day5a(dataPath?: string) {
     }
   });
   const seeds = batches[0][0].split(' ').slice(1).map(Number);
-  const maps = batches.slice(1).map((l) => l.slice(1).map((el) => el.match(regex).map(Number)));
+  const maps = batches.slice(1).map((l) => l.slice(1).map((el) => el.match(numRegex).map(Number)));
 
   const res = seeds.map((seed, i) => {
     let asd = seed;
